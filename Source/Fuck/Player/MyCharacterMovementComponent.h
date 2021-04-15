@@ -19,11 +19,11 @@ private:
 	//Ground running speed
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="My Character Movement|Grounded",
 		Meta = (AllowPrivateAccess = "true"))
-	float RunSpeed = 300.0f;
+	float RunSpeed = 600.0f;
 	//Ground sprinting speed
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="My Character Movement|Grounded",
 		Meta = (AllowPrivateAccess = "true"))
-	float SprintSpeed = 800.0f;
+	float SprintSpeed = 1200.0f;
 	//Acceleration when running
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="My Character Movement|Grounded",
 		Meta = (AllowPrivateAccess = "true"))
@@ -39,13 +39,13 @@ private:
 	//Player velocity while wall running
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="My Character Movement|Wall Running",
 		Meta = (AllowPrivateAccess = "true"))
-	float WallRunSpeed = 625.0f;
+	float WallRunSpeed = 725.0f;
 #pragma endregion
 
 #pragma region Sprinting Functions
 public:
 	//Sets sprinting to either enabled or disabled
-	UFUNCTION()
+	UFUNCTION(BlueprintCallable, Category = "My Character Movement")
 	void SetSprinting(bool sprinting);
 #pragma endregion
 
@@ -107,7 +107,6 @@ private:
 
 #pragma endregion
 
-
 #pragma region Private Variables
 	//true is key down
 	bool SprintKeyDown = false;
@@ -117,7 +116,6 @@ private:
 	EWallRunSide WallRunSide;
 #pragma endregion
 };
-
 
 class FSavedMove_My : public FSavedMove_Character
 {

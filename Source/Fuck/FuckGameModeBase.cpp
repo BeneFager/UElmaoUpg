@@ -2,9 +2,11 @@
 
 
 #include "FuckGameModeBase.h"
-#include "Player/FuckPlayer.h"
+
+#include "Blueprint/UserWidget.h"
+#include "Player/MyCharacter.h"
 
 AFuckGameModeBase::AFuckGameModeBase()
 {
-	DefaultPawnClass = AFuckPlayer::StaticClass();
+	DefaultPawnClass = AMyCharacter::StaticClass();
 }
